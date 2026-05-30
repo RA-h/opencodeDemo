@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Apex Marketing — Grow Your Brand{% endblock %}
+{% block content %}
+<section class="hero">
+    <h1>Your Brand, Amplified.</h1>
+    <p>We craft data-driven marketing strategies that turn clicks into customers.</p>
+    <a href="{{ url_for('services') }}" class="btn">Our Services</a>
+</section>
+
+<section class="features">
+    <div class="feature">
+        <h3>Strategy</h3>
+        <p>Custom marketing plans aligned with your business goals.</p>
+    </div>
+    <div class="feature">
+        <h3>Creative</h3>
+        <p>Eye-catching content that tells your story.</p>
+    </div>
+    <div class="feature">
+        <h3>Analytics</h3>
+        <p>Real-time reporting so you know what works.</p>
+    </div>
+</section>
+{% endblock %}
