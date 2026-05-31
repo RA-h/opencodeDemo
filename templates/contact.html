@@ -1,17 +1,28 @@
 {% extends "base.html" %}
 {% block title %}Contact — Apex Marketing{% endblock %}
 {% block content %}
-<h1>Get in Touch</h1>
-<form method="POST" class="contact-form">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
+<section class="contact-layout container">
+    <div class="contact-copy">
+        <p class="eyebrow">Contact</p>
+        <h1>Get in Touch</h1>
+        <p>Tell us what you are launching, fixing, or trying to prove. We will come back with the fastest path to a sharper campaign.</p>
+        <div class="contact-note">
+            <strong>Typical response</strong>
+            <span>Within one business day with next-step questions.</span>
+        </div>
+    </div>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
+    <form method="POST" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
 
-    <button type="submit" class="btn">Send Message</button>
-</form>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
 {% endblock %}

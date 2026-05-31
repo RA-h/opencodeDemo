@@ -1,24 +1,53 @@
 {% extends "base.html" %}
 {% block title %}Apex Marketing — Grow Your Brand{% endblock %}
 {% block content %}
-<section class="hero">
-    <h1>Your Brand, Amplified.</h1>
-    <p>We craft data-driven marketing strategies that turn clicks into customers.</p>
-    <a href="{{ url_for('services') }}" class="btn">Our Services</a>
+<section class="hero section-shell">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <p class="eyebrow">Growth systems for restless brands</p>
+            <h1>Your Brand, Amplified.</h1>
+            <p class="hero-lede">We craft campaigns with editorial taste, ruthless measurement, and the kind of creative tension people actually remember.</p>
+            <div class="hero-actions">
+                <a href="{{ url_for('services') }}" class="btn">Explore Services</a>
+                <a href="{{ url_for('contact') }}" class="text-link">Start a brief</a>
+            </div>
+        </div>
+        <div class="signal-card" aria-label="Campaign performance snapshot">
+            <span class="signal-label">Live campaign pulse</span>
+            <strong>318%</strong>
+            <span>average qualified-lead lift across launch sprints</span>
+            <div class="signal-bars" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="features">
-    <div class="feature">
+<section class="container features" aria-label="Core strengths">
+    <div class="section-heading">
+        <p class="eyebrow">Operating model</p>
+        <h2>Part studio, part growth lab.</h2>
+    </div>
+    <div class="feature feature-a">
+        <span>01</span>
         <h3>Strategy</h3>
-        <p>Custom marketing plans aligned with your business goals.</p>
+        <p>Positioning, channel bets, and launch plans mapped to revenue instead of vanity metrics.</p>
     </div>
-    <div class="feature">
+    <div class="feature feature-b">
+        <span>02</span>
         <h3>Creative</h3>
-        <p>Eye-catching content that tells your story.</p>
+        <p>Campaign concepts, social systems, and landing pages with a distinct point of view.</p>
     </div>
-    <div class="feature">
+    <div class="feature feature-c">
+        <span>03</span>
         <h3>Analytics</h3>
-        <p>Real-time reporting so you know what works.</p>
+        <p>Measurement loops that reveal what to double down on and what to kill quickly.</p>
     </div>
+</section>
+
+<section class="container proof-strip" aria-label="Results">
+    <p><strong>42</strong> launch sprints shipped</p>
+    <p><strong>11M</strong> tracked buyer signals</p>
+    <p><strong>6 wk</strong> average campaign cycle</p>
 </section>
 {% endblock %}

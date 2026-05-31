@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Apex Marketing{% endblock %}</title>
+    <meta name="description" content="Apex Marketing builds sharp campaigns, brand systems, and growth engines for ambitious teams.">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <nav>
+    <nav class="site-nav" aria-label="Primary navigation">
         <div class="container nav-inner">
-            <a href="{{ url_for('home') }}" class="logo">Apex Marketing</a>
-            <ul>
+            <a href="{{ url_for('home') }}" class="logo" aria-label="Apex Marketing home">
+                <span class="logo-mark">A</span>
+                <span>Apex Marketing</span>
+            </a>
+            <ul class="nav-links">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('services') }}">Services</a></li>
                 <li><a href="{{ url_for('contact') }}">Contact</a></li>
@@ -18,20 +22,23 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
-                {% for msg in messages %}
-                    <div class="flash">{{ msg }}</div>
-                {% endfor %}
+                <div class="container flash-wrap" role="status" aria-live="polite">
+                    {% for msg in messages %}
+                        <div class="flash">{{ msg }}</div>
+                    {% endfor %}
+                </div>
             {% endif %}
         {% endwith %}
         {% block content %}{% endblock %}
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Apex Marketing. All rights reserved.</p>
+            <p>Apex Marketing</p>
+            <p>&copy; 2026. Built for campaigns that refuse to blend in.</p>
         </div>
     </footer>
 </body>

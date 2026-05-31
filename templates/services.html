@@ -1,12 +1,37 @@
 {% extends "base.html" %}
 {% block title %}Services — Apex Marketing{% endblock %}
 {% block content %}
-<h1>Our Services</h1>
-<ul class="services-list">
-    <li><strong>Social Media Management</strong> — Content creation, scheduling, and community engagement across all major platforms.</li>
-    <li><strong>SEO & SEM</strong> — Drive organic traffic and manage paid campaigns for maximum ROI.</li>
-    <li><strong>Email Marketing</strong> — Targeted campaigns, automation flows, and detailed analytics.</li>
-    <li><strong>Brand Design</strong> — Logos, visual identity, and brand guidelines that stand out.</li>
-    <li><strong>Content Marketing</strong> — Blog posts, videos, and whitepapers that establish authority.</li>
-</ul>
+<section class="page-hero container">
+    <p class="eyebrow">Services</p>
+    <h1>Our Services</h1>
+    <p>Pick one focused sprint or stack the system end to end. Every engagement is built to move a real audience, not decorate a deck.</p>
+</section>
+
+<section class="container services-list" aria-label="Marketing services">
+    <article class="service-card">
+        <span>01</span>
+        <h2>Social Media Management</h2>
+        <p>Content creation, scheduling, and community engagement across the platforms your buyers actually use.</p>
+    </article>
+    <article class="service-card">
+        <span>02</span>
+        <h2>SEO &amp; SEM</h2>
+        <p>Technical search cleanup, sharp landing pages, and paid campaigns tuned for intent instead of raw traffic.</p>
+    </article>
+    <article class="service-card">
+        <span>03</span>
+        <h2>Email Marketing</h2>
+        <p>Targeted campaigns, automation flows, and lifecycle reporting that keep momentum after the first click.</p>
+    </article>
+    <article class="service-card">
+        <span>04</span>
+        <h2>Brand Design</h2>
+        <p>Logos, visual identity, launch kits, and brand guidelines made to hold up across every customer touchpoint.</p>
+    </article>
+    <article class="service-card service-card-wide">
+        <span>05</span>
+        <h2>Content Marketing</h2>
+        <p>Articles, video concepts, and authority pieces that convert expertise into trust before the sales call starts.</p>
+    </article>
+</section>
 {% endblock %}
